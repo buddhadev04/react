@@ -1,0 +1,122 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Title */
+.title {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1s ease-in;
+}
+
+/* Status Text */
+.status {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Board */
+.board {
+  max-width: 450px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  border: 2px solid #ffd700;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Blocks */
+.block {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  background: #fefefe;
+  margin: 5px;
+  border-radius: 15px;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1),
+              0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.block:hover {
+  transform: scale(1.07);
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+/* Remove borders for seamless look */
+.row .block:first-child {
+  margin-left: 0;
+}
+.row .block:last-child {
+  margin-right: 0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Reset Button */
+button {
+  padding: 10px 25px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: #ffcc00;
+  transform: translateY(-2px);
+}
